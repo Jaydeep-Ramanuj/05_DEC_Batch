@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      onfocus="console.log('I am focused')"
+      onchange="console.log('Text changed')"
+    />
+    <img
+      src="https://images.pexels.com/photos/6373542/pexels-photo-6373542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt=""
+      onload="console.log('image loaded')"
+    />
+
+    <script>
+      document.getElementsByTagName("img")[0].onmouseover = () => {
+        console.log("Hello Chirag");
+      };
+      document.getElementsByTagName("input")[0].on = () => {
+        document.getElementsByTagName("input")[0].style.backgroundColor =
+          "yellow";
+      };
+    </script>
+  </body>
+</html>
