@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 500px;
+        width: 500px;
+        /* background-color: aquamarine; */
+      }
+      img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        /* filter: blur(3px); */
+        /* filter: brightness(0.1); */
+        /* filter: grayscale(0.8); */
+        /* filter: sepia(0.8); */
+        /* filter: invert(); */
+        /* filter: contrast(); */
+        filter: drop-shadow();
+        transition: all 300ms;
+      }
+      img:hover {
+        /* filter: blur(0); */
+        /* filter: brightness(0.8); */
+        /* filter: grayscale(0.2); */
+        /* filter: sepia(0.2); */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="parent"> -->
+    <img
+      src="https://images.pexels.com/photos/12102152/pexels-photo-12102152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt=""
+    />
+    <!-- </div> -->
+  </body>
+</html>
