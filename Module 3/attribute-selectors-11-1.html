@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input {
+        background-color: red;
+      }
+      #text-input {
+        background-color: grey;
+      } */
+      input[type='text'] {
+        background-color: red;
+      }
+      input[type='password'] {
+        background-color: aquamarine;
+      }
+      input[type='number'] {
+        background-color: chocolate;
+      }
+
+      div[data-name] {
+        background-color: antiquewhite;
+      }
+
+      div[data-name='jayesh'] {
+        color: purple;
+      }
+      div[data-name='vimal'] {
+        color: violet;
+      }
+      div[data-name~='bhagat'] {
+        font-weight: 700;
+      }
+      div[data-name^='nav'] {
+        color: cadetblue;
+      }
+      div[data-name$='al'] {
+        color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="text-input" type="text" data-name="vimal" />
+    <!-- <input type="password" /> -->
+    <input type="password" />
+    <input type="number" />
+    <input type="text" name="" id="" />
+
+    <div data-name="jayesh bhagat">jayesh</div>
+    <div data-name="navsad">navsad</div>
+    <div data-name="navvimal">vimal</div>
+    <div data-name="chirag">chirag</div>
+  </body>
+</html>
