@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        margin: 100px;
+        height: 300px;
+        width: 300px;
+        border: 3px solid;
+        border-left-color: red;
+        border-right-color: greenyellow;
+        border-radius: 16px;
+        background-color: #280274;
+        /* transform-style: preserve-3d; */
+        transition: all 600ms;
+        transition-delay: 500ms;
+
+        /* transform: scale(0.8); */
+        /* transform: scaleX(0.6); */
+        /* transform: scaleY(1.2); */
+        /* transform: translateX(100px); */
+        /* transform: translate(-30px, -50px); */
+      }
+      .box:hover {
+        background-color: #3652ad;
+        /* transform: rotate(45deg) translateX(90px); */
+        /* transform: perspective(100px) rotateX(-80deg); */
+        /* transform: translate(-30px, -50px); */
+        transform: translate(60px, -81px) scale(1.1, 1) skew(1deg, -14deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
