@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+      .parent {
+        height: 100%;
+        width: 100%;
+        background-color: aquamarine;
+        position: relative;
+        /* clip-path: polygon(0 0, 100% 0, 85% 70%, 0 100%); */
+        clip-path: circle(10% at 100% 0);
+        transition: all 600ms;
+      }
+      .parent:hover {
+        clip-path: circle(200% at 100% 0);
+      }
+      .child {
+        position: absolute;
+        top: 400px;
+        left: 100px;
+        height: 100px;
+        width: 100px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
