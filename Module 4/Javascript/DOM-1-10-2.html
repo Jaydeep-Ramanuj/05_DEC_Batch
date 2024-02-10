@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent > div {
+        color: red;
+      }
+
+      .btn-style {
+        height: 100px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: whitesmoke;
+        background-color: rgba(128, 255, 0, 0.544);
+      }
+
+      .color-blue {
+        color: blue;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    Jayesh
+    <input type="text" name="" id="" placeholder="Enter your name" />
+    <button id="submit-btn" class="this that something">Submit</button>
+    <button class="btn">Reset</button>
+    <button class="btn">Send</button>
+    <div class="parent">
+      <div>child1</div>
+      <div>child2</div>
+    </div>
+    <script>
+      let submitBtn = document.getElementsByTagName('button')[0];
+      let resetBtn = document.getElementsByTagName('button')[1];
+      let sendBtn = document.getElementsByTagName('button')[2];
+      //   let submitBtn = document.getElementById('submit-btn');
+      //   let btns = document.getElementsByClassName('btn');
+      console.log(submitBtn);
+
+      //   submitBtn.innerText = 'Jayesh';
+      //   resetBtn.innerText = 'Vimal';
+      //   sendBtn.innerText = 'Navsad';
+      submitBtn.innerHTML = '<b>Jayesh</b>';
+      resetBtn.innerHTML = '<i>Vimal</i>';
+      sendBtn.innerHTML = '<u>Navsad</u>';
+
+      let child = document.querySelector('.parent > div');
+      let children = document.querySelectorAll('.parent > div');
+      console.log(child);
+      console.log(children);
+
+      //   child.innerText = 'Navsad';
+      //   child.style.color = 'blue';
+
+      //   submitBtn.style.backgroundColor = 'aqua';
+      //   submitBtn.style.width = '200px';
+      //   submitBtn.style.height = '300px';
+      //   submitBtn.style.borderRadius = '12px';
+
+      //   submitBtn.style.cssText =
+      //     'background-color:grey; width:100px; height:100px; border-radius:32px;';
+
+      //   submitBtn.setAttribute('class', 'btn-style');
+      //   submitBtn.classList.add('btn-style');
+      //   submitBtn.classList.remove('btn-style');
+
+      submitBtn.addEventListener('click', function (event) {
+        // console.log('Submit btn clicked');
+        // event.preventDefault();
+
+        if (resetBtn.classList.contains('color-blue')) {
+          resetBtn.classList.remove('color-blue');
+        } else {
+          resetBtn.classList.add('color-blue');
+        }
+        // resetBtn.classList.add('color-blue');
+        // resetBtn.classList.remove('color-blue');
+
+        // resetBtn.classList.toggle('color-blue');
+      });
+    </script>
+  </body>
+</html>
