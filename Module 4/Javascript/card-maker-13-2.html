@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 10px;
+        border-radius: 12px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: all 300ms;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        outline: 2px solid black;
+        outline-offset: 3px;
+        object-fit: cover;
+      }
+      .name {
+        font-size: 1.5rem;
+        color: orange;
+      }
+      .country {
+        font-size: 1.3em;
+        color: black;
+      }
+
+      .profession {
+        color: grey;
+      }
+
+      .msg-btn,
+      .following-btn {
+        padding: 3px 5px;
+        border-radius: 5px;
+      }
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        background-color: #251d39;
+        padding: 20px 10px;
+      }
+      .skill-pill {
+        border: 1px solid whitesmoke;
+        border-radius: 3px;
+        padding: 3px 5px;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="card">
+      <div class="card-info">
+        <img
+          src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <div class="name">Jayesh</div>
+        <div class="country">India</div>
+        <div class="profession">Front End</div>
+        <div class="btns">
+          <div class="msg-btn">Message</div>
+          <div class="following-btn">Following</div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">Javascript</div>
+        <div class="skill-pill">jQuery</div>
+        <div class="skill-pill">Bootstrap</div>
+        <div class="skill-pill">React</div>
+      </div>
+    </div> -->
+    <script>
+      let body = document.getElementsByTagName('body')[0];
+      let cardTemplate = `<div class="card">
+      <div class="card-info">
+        <img
+          src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <div class="name">Jayesh</div>
+        <div class="country">India</div>
+        <div class="profession">Front End</div>
+        <div class="btns">
+          <div class="msg-btn">Message</div>
+          <div class="following-btn">Following</div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">Javascript</div>
+        <div class="skill-pill">jQuery</div>
+        <div class="skill-pill">Bootstrap</div>
+        <div class="skill-pill">React</div>
+      </div>
+    </div>`;
+
+      let card = document.createElement('div');
+      let cardInfo = document.createElement('div');
+      let skillsContainer = document.createElement('div');
+      let img = document.createElement('img');
+      let name = document.createElement('div');
+      let profession = document.createElement('div');
+      let country = document.createElement('div');
+      let HTMLSkill = document.createElement('div');
+      let cssSkill = document.createElement('div');
+      let jsSkill = document.createElement('div');
+      let bootstrapSkill = document.createElement('div');
+      let reactSkill = document.createElement('div');
+      let jQuerySkill = document.createElement('div');
+
+      card.classList.add('card');
+      cardInfo.classList.add('card-info');
+      name.classList.add('name');
+      profession.classList.add('profession');
+      country.classList.add('country');
+      skillsContainer.classList.add('skills-container');
+
+      HTMLSkill.classList.add('skill-pill');
+      cssSkill.classList.add('skill-pill');
+      jsSkill.classList.add('skill-pill');
+      bootstrapSkill.classList.add('skill-pill');
+      reactSkill.classList.add('skill-pill');
+      jQuerySkill.classList.add('skill-pill');
+
+      name.innerText = 'Navsad';
+      country.innerText = 'India';
+      profession.innerText = 'Ex-Front End';
+      HTMLSkill.innerText = 'HTML';
+      cssSkill.innerText = 'css';
+      jsSkill.innerText = 'js';
+      bootstrapSkill.innerText = 'bootstrap';
+      reactSkill.innerText = 'react';
+      jQuerySkill.innerText = 'jQuery';
+
+      img.setAttribute(
+        'src',
+        'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      );
+
+      cardInfo.append(img);
+      cardInfo.append(name);
+      cardInfo.append(country);
+      cardInfo.append(profession);
+
+      skillsContainer.append(HTMLSkill);
+      skillsContainer.append(cssSkill);
+      skillsContainer.append(jsSkill);
+      skillsContainer.append(jQuerySkill);
+      skillsContainer.append(bootstrapSkill);
+      skillsContainer.append(reactSkill);
+
+      card.append(cardInfo);
+      card.append(skillsContainer);
+
+      console.log(card);
+
+      body.append(card);
+    </script>
+  </body>
+</html>
