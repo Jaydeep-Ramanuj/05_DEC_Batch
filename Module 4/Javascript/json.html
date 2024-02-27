@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .card {
+        padding: 10px;
+        width: 300px;
+        height: 250px;
+        background-color: whitesmoke;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .content {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="card">
+      <img src="" alt="" />
+      <div class="content">
+        <div class="title"></div>
+        <div class="rating"></div>
+        <div class="cusines"></div>
+        <div class="address"></div>
+      </div>
+    </div> -->
+    <script>
+      let result;
+
+      const swiggyURL =
+        // 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.2903836&lng=70.7785919&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+        // 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.0145&lng=72.5929&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9696&lng=72.8193&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+
+      function getData(number) {
+        fetch(swiggyURL)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(
+              data.data.cards[1].card.card.gridElements.infoWithStyle
+                .restaurants[11].info
+            );
+            result =
+              data.data.cards[1].card.card.gridElements.infoWithStyle
+                .restaurants[number].info;
+
+            let name = result.name;
+            let cuisines = result.cuisines;
+            let rating = result.avgRating;
+            let address = result.locality;
+            let imgURL =
+              'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/' +
+              result.cloudinaryImageId;
+            // https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/
+            makeCard(name, rating, cuisines, address, imgURL);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        //   console.log(result.data);
+      }
+
+      function makeCard(title, rating, cusines, address, url) {
+        swiggyCardTemplate = `
+            <img src=${url} alt="" />
+            <div class="content">
+              <div class="title">${title}</div>
+              <div class="rating">${rating}</div>
+              <div class="cusines">${cusines.join(', ')}</div>
+              <div class="address">${address}</div>
+            </div>`;
+        let newCard = document.createElement('div');
+        newCard.classList.add('card');
+        newCard.innerHTML = swiggyCardTemplate;
+        document.getElementsByTagName('body')[0].append(newCard);
+      }
+
+      for (let i = 0; i < 10; i++) {
+        getData(i);
+      }
+    </script>
+  </body>
+</html>
