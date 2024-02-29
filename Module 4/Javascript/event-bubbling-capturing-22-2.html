@@ -49,7 +49,7 @@
       parent.addEventListener(
         'click',
         function (event) {
-          event.stopPropagation();
+          // event.stopPropagation();
           console.log('Parent is clicked');
         }
         // true
@@ -57,28 +57,27 @@
       child.addEventListener(
         'click',
         function (event) {
-          event.stopPropagation();
+          // event.stopPropagation();
           console.log('Child is clicked');
+          btn.style.color = 'green';
+          child.style.backgroundColor = 'green';
         }
         // true
       );
       subChild.addEventListener(
         'click',
         function (event) {
-          event.stopPropagation();
+          // event.stopPropagation();
           console.log('SubChild is clicked');
           console.log('Btn is clicked');
         }
         // true
       );
-      btn.addEventListener(
-        'click',
-        function (event) {
-          //   event.stopPropagation();
-          //   console.log('Btn is clicked');
-        }
-        // true
-      );
+      btn.addEventListener('click', function (event) {
+        // console.log('btn hovered');
+        //   event.stopPropagation();
+        //   console.log('Btn is clicked');
+      });
     </script>
   </body>
 </html>

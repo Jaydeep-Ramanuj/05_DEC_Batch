@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      height = prompt('Enter height');
+      cardHeight = 0;
+      try {
+        height < 0;
+        // throw 'Negative Height is not allowed';
+        cardHeight = height;
+      } catch (err) {
+        console.error(err);
+        alert('Error came but you continue your work ');
+        // console.log('Error came but you continue your work ');
+      }
+      console.log('This will not print');
+      console.log(cardHeight);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let day = new Date().getDate();
+      // let time = new Date().getDate();
+      //   let time = new Date().getFullYear();
+      let hours = new Date().getHours();
+      let minutes = new Date().getMinutes();
+      let seconds = new Date().getSeconds();
+      //   let time = new Date().getTimezoneOffset();
+      //   let time = new Date().getSeconds();
+
+      let time = `${hours}:${minutes}:${seconds} ${hours < 12 ? 'AM' : 'PM'}`;
+
+      let dayInDigit = new Date().getDay();
+      //   console.log(day);
+      //   dayInDigit = 2;
+      let dayInWord;
+      switch (dayInDigit) {
+        case 0:
+          dayInWord = 'Sunday';
+          break;
+        case 1:
+          dayInWord = 'Monday';
+          break;
+        case 2:
+          dayInWord = 'Tuesday';
+          break;
+        case 3:
+          dayInWord = 'Wednesday';
+          break;
+        case 4:
+          dayInWord = 'Thursday';
+          break;
+        case 5:
+          dayInWord = 'Friday';
+          break;
+        case 6:
+          dayInWord = 'Saturday';
+          break;
+      }
+
+      console.log(dayInWord);
+
+      let result = `Current day is ${dayInWord} and current time is ${time}`;
+      console.log(result);
+
+      let myString = 'navsad';
+
+      let temp = myString[0].toUpperCase();
+
+      let temp2 = myString.slice(1, myString.length);
+      console.log(temp2);
+
+      let resultedName = temp + temp2;
+      console.log(resultedName);
+
+      //   console.log(time);
+    </script>
+  </body>
+</html>
