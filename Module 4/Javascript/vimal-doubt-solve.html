@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   for (i = 972; i >= 897; i--) console.log(i);
+      //   console.log((true && false) || (false && true));
+      //   console.log((true && false) || (true && true));
+      //   console.log(true && 2 && 'hello');
+
+      a = 10;
+      a == 10 || console.log('This NOT is 10');
+
+      //   fileName = 'navsad.html';
+      fileName = 'navsad.htm';
+      //   fileName = 'navsad.py';
+      //   fileName = 'navsad.c';
+      //   fileName = 'vimal.gitignore';
+      //   console.log(fileName);
+
+      //   let dotIndex = fileName.indexOf('.');
+      //   console.log(fileName.slice(dotIndex));
+
+      // let dotIndex = fileName.indexOf('.');
+      //   console.log('vimal.js'.slice(fileName.indexOf('.')));
+
+      //   day = 6593;
+      //   console.log(Math.floor(day / 365));
+
+      //   year = 5;
+      //   console.log(Math.floor(year * 365));
+      currentDay = new Date().getDate();
+      let isLeapYear = false;
+      //   currentMonth = new Date().getMonth();
+      currentMonth = 28;
+      //   console.log(currentDay);
+      //   console.log(currentMonth);
+
+      let countOfDayInCurrentMonth;
+      if (
+        currentMonth == '0' ||
+        currentMonth == '2' ||
+        currentMonth == '4' ||
+        currentMonth == '6' ||
+        currentMonth == '7' ||
+        currentMonth == '9' ||
+        currentMonth == '11'
+      ) {
+        countOfDayInCurrentMonth = 31;
+      } else if (currentMonth == '1') {
+        if (isLeapYear) {
+          countOfDayInCurrentMonth = 29;
+        } else {
+          countOfDayInCurrentMonth = 28;
+        }
+      } else {
+        countOfDayInCurrentMonth = 30;
+      }
+
+      daysLeftInCurrentMonth = countOfDayInCurrentMonth - currentDay;
+      daysLeftTillDecMonth = 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
+      //   console.log(daysLeftIncurrentMonth);
+      //   console.log(daysLeftTillDecMonth);
+
+      daysLeftTillChristmasFromToday =
+        daysLeftInCurrentMonth + daysLeftTillDecMonth + 25;
+
+      console.log(daysLeftTillChristmasFromToday);
+
+      function mul(firstNumber, secondNumber) {
+        console.log(firstNumber * secondNumber);
+      }
+
+      mul(10, 20);
+    </script>
+  </body>
+</html>
