@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 10px;
+        border-radius: 12px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: all 300ms;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        outline: 2px solid black;
+        outline-offset: 3px;
+        object-fit: cover;
+      }
+      .name {
+        font-size: 1.5rem;
+        color: orange;
+      }
+      .country {
+        font-size: 1.3em;
+        color: black;
+      }
+
+      .profession {
+        color: grey;
+      }
+
+      .msg-btn,
+      .following-btn {
+        padding: 3px 5px;
+        border-radius: 5px;
+      }
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        background-color: #251d39;
+        padding: 20px 10px;
+      }
+      .skill-pill {
+        border: 1px solid whitesmoke;
+        border-radius: 3px;
+        padding: 3px 5px;
+        color: whitesmoke;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="" id="username" placeholder="Enter your name" />
+      <input type="text" name="" id="city" placeholder="Enter your city" />
+      <select name="" id="country">
+        <option value="india">india</option>
+        <option value="US">US</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+        <option value="Fineland">Fineland</option>
+      </select>
+      <input type="url" name="" id="url" />
+      <button>Submit</button>
+    </form>
+    <script>
+      let body = document.getElementsByTagName('body')[0];
+      let btn = document.getElementsByTagName('button')[0];
+
+      let name = document.getElementById('username');
+      let city = document.getElementById('city');
+      let country = document.getElementById('country');
+      let url = document.getElementById('url');
+
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        makeCard(name.value, city.value, country.value, url.value);
+        // makeCard();
+      });
+
+      function makeCard(
+        username = 'No-Name',
+        country = 'None',
+        course = 'Padh le thoda',
+        imgUrl = 'https://visualpharm.com/assets/527/Person-595b40b85ba036ed117da7ec.svg'
+      ) {
+        let cardTemplate = `<div class="card-info">
+        <img
+          src=${imgUrl}
+          alt=""
+        />
+        <div class="name">${username}</div>
+        <div class="country">${country}</div>
+        <div class="profession">${course}</div>
+        <div class="btns">
+          <div class="msg-btn">Message</div>
+          <div class="following-btn">Following</div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">Javascript</div>
+        <div class="skill-pill">jQuery</div>
+        <div class="skill-pill">Bootstrap</div>
+        <div class="skill-pill">React</div>
+      </div>`;
+
+        newCard = document.createElement('div');
+        newCard.classList.add('card');
+        newCard.innerHTML = cardTemplate;
+
+        //   console.log(card);
+        body.append(newCard);
+      }
+    </script>
+  </body>
+</html>
