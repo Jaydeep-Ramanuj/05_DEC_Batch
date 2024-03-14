@@ -8,16 +8,49 @@
   <body>
     <input type="email" name="" id="email" />
     <button>Submit</button>
+    <button>Go</button>
     <script>
       document
         .getElementsByTagName('button')[0]
         .addEventListener('click', (event) => {
           //   event.preventDefault();
           let emailValue = document.getElementById('email').value;
+          // console.log(emailValue);
+          // checkEmail(emailValue);
+
           checkEmail(emailValue);
         });
 
+      document
+        .getElementsByTagName('button')[1]
+        .addEventListener('click', () => {
+          let inputValue = document.getElementsByTagName('input')[0].value;
+
+          checkEmail(inputValue);
+        });
+
       function checkEmail(emailval) {
+        // // console.log(emailval.indexOf('@'));
+        // positionOFAt = emailval.indexOf('.');
+        // console.log('positionOFAt:', positionOFAt);
+        // charactersBeforeAt = emailval.slice(positionOFAt, emailval.length);
+
+        // console.log('charactersBeforeAt:', charactersBeforeAt);
+
+        // isCharactersBeforeAtIsEmpty = charactersBeforeAt == '';
+        // console.log(
+        //   'isCharactersBeforeAtIsEmpty:',
+        //   isCharactersBeforeAtIsEmpty
+        // );
+
+        // console.log(emailval.slice(0, emailval.indexOf('@')) != '');
+
+        // console.log(
+        //   emailval.slice(emailval.indexOf('.'), emailval.length - 1) != ''
+        // );
+
+        // console.log(emailval.slice(0, emailval.indexOf('@')) != '');
+
         console.log(
           emailval.includes('@') &&
             emailval.includes('.') &&
@@ -26,6 +59,9 @@
             emailval.slice(emailval.indexOf('.') + 1) != ''
         );
 
+        // ---------------------------
+        // ***************************
+        // ---------------------------
         // let isAtAvailable = false;
         // let isDotAvailable = false;
         // let AreDotAndAtNotTogether = false;
