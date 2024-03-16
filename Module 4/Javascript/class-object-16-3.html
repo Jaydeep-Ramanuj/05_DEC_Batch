@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function foo() {
+      //     console.log('Inside foo()');
+      //   }
+      //   foo();
+
+      // -----------------
+
+      class Car {
+        // class properties
+        // name = 'Tata';
+        // brandName = 'Harrier';
+
+        // constructor function
+        constructor(owner, name, brandName) {
+          this.owner = owner;
+          this.name = name;
+          this.brandName = brandName;
+        }
+
+        // class method
+        giveBrandName() {
+          return this.name;
+        }
+
+        printOwnerWithCarName() {
+          return `${this.owner} has ${this.brandName} of ${this.name} company.`;
+        }
+      }
+
+      let car1 = new Car('Jayesh', 'Tata', 'harrier');
+      let car2 = new Car('Vimal', 'Mahindra', 'Thar');
+      let car3 = new Car('Navsad', 'Toyota', 'Fortuner');
+
+      //   console.log(car1.name);
+      //   console.log(car2.name);
+      //   console.log(car2.giveBrandName());
+      console.log(car1.printOwnerWithCarName());
+      console.log(car2.printOwnerWithCarName());
+      console.log(car3.printOwnerWithCarName());
+
+      class Card {
+        constructor(username, profession, imgUrl, skills, location) {
+          this.username = username;
+          this.profession = profession;
+          this.imgUrl = imgUrl;
+          this.skills = skills;
+          this.location = location;
+        }
+
+        generateCardWithFirstStyle() {
+          return 'style1';
+        }
+        generateCardWithSecondStyle() {
+          return 'style2';
+        }
+        generateCardWithThirdStyle() {
+          return 'style3';
+        }
+      }
+
+      let navsad = new Card(
+        'Navsad',
+        'Ex-Front End',
+        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        ['HTML', 'CSS', 'C', 'C++', 'Javascript', 'Wankaner']
+      );
+      console.log(document.getElementsByTagName('body'));
+      navsad.generateCardWithFirstStyle();
+    </script>
+  </body>
+</html>
