@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   </head>
   <body>
+    <h1>Document Object File</h1>
+    <a href="history-object.html">Go back to History page</a>
+    <button class="back">Go back</button>
     <script>
       console.log(document);
       console.dir(document);
       //   document.location.reload();
       //   document.location.reload();
       console.log(document.URL);
+
+      document
+        .getElementsByClassName('back')[0]
+        .addEventListener('click', () => {
+          console.log('back btn clicked');
+
+          window.history.back();
+        });
     </script>
   </body>
 </html>
