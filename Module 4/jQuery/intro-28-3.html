@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .make-hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="hide">hide</button>
+    <button class="show">show</button>
+    <button class="toggle">toggle</button>
+    <div class="some">Some</div>
+    <div id="else">Else</div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let btn = document.getElementsByTagName('button')[0];
+
+      //   console.log(btn);
+
+      let some = document.getElementsByClassName('some')[0];
+      let toggleBtn = document.getElementsByClassName('toggle')[0];
+
+      toggleBtn.addEventListener('click', () => {
+        some.classList.toggle('make-hide');
+      });
+
+      //   console.log($('button').text());
+      //   $('button').text();
+      //   $('button').html('<i>Navsad</i>');
+      //   console.log($('button').html());
+      //   console.log($('.some'));
+      //   console.log($('#else'));
+
+      $('.hide').click(() => {
+        $('.some').hide();
+      });
+      $('.show').click(() => {
+        $('.some').show();
+      });
+      $('.toggle').click(() => $('.some').toggle());
+    </script>
+  </body>
+</html>
