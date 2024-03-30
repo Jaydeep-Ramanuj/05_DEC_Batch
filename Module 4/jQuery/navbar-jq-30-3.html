@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        background-color: steelblue;
+      }
+      nav {
+        display: flex;
+        margin-left: auto;
+        margin-right: 50px;
+        gap: 20px;
+      }
+      .btns {
+        display: flex;
+        gap: 30px;
+      }
+      .menu {
+        transition: all 300ms;
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .menu:hover,
+      .sub-menu:hover,
+      .samosa-type:hover {
+        background-color: rgba(135, 207, 235, 0.53);
+      }
+
+      .product {
+        position: relative;
+      }
+      .sub-menu-bar,
+      .samosa-items {
+        padding: 10px;
+        top: 100%;
+        left: 0;
+        background-color: steelblue;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        display: none;
+        gap: 10px;
+        border-radius: 5px;
+      }
+
+      .samosa-items {
+        /* width: fit-content; */
+        text-wrap: nowrap;
+        position: absolute;
+        padding: 10px;
+        top: calc(100% - 30px);
+        left: 95%;
+      }
+
+      .samosa-type {
+        padding: 3px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .sub-menu {
+        padding: 3px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <nav>
+        <div class="menu">Service</div>
+        <div class="menu product">
+          Products
+          <div class="sub-menu-bar">
+            <div class="sub-menu">Jalebi</div>
+            <div class="sub-menu">Fafda</div>
+            <div class="sub-menu">Bhajiya</div>
+            <div class="sub-menu samosa">
+              Samosa
+              <div class="samosa-items">
+                <div class="samosa-type">Panjabi samosa</div>
+                <div class="samosa-type">Chinese samosa</div>
+                <div class="samosa-type">Navsad samosa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">Blog</div>
+        <div class="menu">About</div>
+        <div class="menu">Contact</div>
+      </nav>
+      <div class="btns">
+        <div class="login-btn">Login</div>
+        <div class="sign-up-btn">singup</div>
+      </div>
+    </header>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('.product').hover(() => {
+        $('.sub-menu-bar').stop().slideToggle();
+      });
+      $('.samosa').hover(() => {
+        $('.samosa-items').stop().slideToggle();
+      });
+    </script>
+  </body>
+</html>

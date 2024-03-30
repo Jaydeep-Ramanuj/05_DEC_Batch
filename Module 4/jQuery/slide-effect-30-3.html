@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 200px;
+        background-color: yellowgreen;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="up">slide Up</button>
+    <button class="down">slide Down</button>
+    <button class="toggle">Slide toggle</button>
+    <div class="box"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('.up').click(() => {
+        $('.box').slideUp(1000);
+      });
+      $('.down').click(() => {
+        $('.box').slideDown(10000);
+      });
+      //   $('.down').hover(() => {
+      //     $('.box').slideDown();
+      //   });
+      //   $('.down').mouseleave(() => {
+      //     $('.box').slideUp();
+      //   });
+      $('.toggle').click(() => {
+        $('.box').slideToggle(500);
+      });
+    </script>
+  </body>
+</html>
