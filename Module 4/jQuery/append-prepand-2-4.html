@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This was already in Box</p>
+    </div>
+    <button>Click here</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('button').click(() => {
+        // ----------
+        // create new element
+
+        let element = $('<div>This is new div</div>');
+        console.log(element);
+
+        // ----------
+        // append
+
+        $('.box').append('<p>This p tag will append --append</p>');
+
+        // ----------
+        // prepend
+
+        $('.box').prepend('<p>This p tag will prepend --prepend</p>');
+
+        // $('.box').append(element);
+
+        // ----------
+        // before
+        $('.box').before('<p>This p will be before .box --before </p>');
+
+        // ----------
+        // before
+        $('.box').after('<p>This p will be after .box --after</p>');
+      });
+    </script>
+  </body>
+</html>

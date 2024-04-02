@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: yellowgreen;
+        border: 1px solid;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+    <input type="checkbox" name="" id="" />
+    <button>Click here</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('button').click(() => {
+        // ----------
+        // remove(), to remove given element
+        // $('.box').remove();
+
+        // ----------
+        // remove(), to remove given element
+        // $('.box').prop('background-color');
+
+        var $x = $('.box');
+        $x.prop('color', 'green');
+
+        // console.log($('input').prop('checked'));
+      });
+    </script>
+  </body>
+</html>
