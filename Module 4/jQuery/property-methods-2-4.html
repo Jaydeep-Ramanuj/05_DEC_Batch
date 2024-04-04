@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="box">Box</div>
+    <input type="text" name="" id="name" />
     <input type="checkbox" name="" id="" />
     <button>Click here</button>
     <script
@@ -29,13 +30,11 @@
         // $('.box').remove();
 
         // ----------
-        // remove(), to remove given element
-        // $('.box').prop('background-color');
+        // val()
+        // console.log($('#name').val());
 
-        var $x = $('.box');
-        $x.prop('color', 'green');
-
-        // console.log($('input').prop('checked'));
+        // val('data')
+        console.log($('#name').val('jay'));
       });
     </script>
   </body>

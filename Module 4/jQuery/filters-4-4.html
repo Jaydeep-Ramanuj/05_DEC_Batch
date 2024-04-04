@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child some">child2 with some</div>
+      <div class="child">child3</div>
+      <div class="child some">child4 with some</div>
+      <div class="child">child5</div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      console.log($('.parent'));
+
+      //   first(), it gives first specified element
+      console.log($('.child').first());
+
+      //   last(), it gives last specified element
+      console.log($('.child').last());
+
+      //   eq(), it gives specified element at specified location /  index
+      console.log($('.child').eq('2'));
+
+      //   filter(), it gives list of elements which satisfy specified selector
+      console.log($('.child').filter('.some'));
+
+      //   filter(), it gives list of elements which doesn't satisfy specified selector
+      console.log($('.child').not('.some'));
+    </script>
+  </body>
+</html>
