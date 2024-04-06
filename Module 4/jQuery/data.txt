@@ -1,0 +1,2 @@
+This is data inside data.txt
+This is new data added inside data.txt.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      //   console.log('This will be executed first');
+      //   console.log('This will be executed second');
+      //   //   Asynchronous code / non blocking code
+      //   setTimeout(() => {
+      //     console.log('This will be printed after 3 seconds');
+      //   }, 3000);
+      //   console.log('This will be executed third');
+
+      //   Ajax => Asynchronous Javascript And XML, which useful when we want to get data from server
+
+      //   For that we were using XMLHttpRequest() but we need to handle all states in js, to make it easy we use ajax inside jQuery
+
+      //  $.get(), getting data from local file
+      $.get('data.txt', (data, response) => {
+        console.log(data);
+      });
+
+      //  $.post() *This will not work as browser will not allow write operation
+      //   $.post('data.txt', 'add this', (data, response) => {
+      //     console.log(data);
+      //   });
+
+      $.get('https://randomuser.me/api/', (data, response) => {
+        console.log(data);
+      });
+      $.get(
+        'https://random-data-api.com/api/v2/users?size=2&is_xml=true',
+        (data, response) => {
+          console.log(data);
+        }
+      );
+    </script>
+  </body>
+</html>
