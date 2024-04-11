@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="plugins/floating-whatsapp-chat/whatsapp-chat.css"
+    />
+  </head>
+  <body>
+    <div id="example"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="plugins/floating-whatsapp-chat/whatsapp-chat.js"></script>
+    <script>
+      //   whatsappchat.singleUser({
+      //     selector: '#example',
+      //     name: 'jQueryScript',
+      //     phone: 'YOUR PHONE NUMBER',
+      //     designation: 'jQuery Script',
+      //     image: 'Avatar.jpg',
+      //   });
+      whatsappchat.multipleUser({
+        selector: '#example',
+        users: [
+          {
+            name: 'jQueryScript',
+            phone: '8801343434343',
+            designation: 'jQueryScript.Net',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/d/da/Matt_LeBlanc_as_Joey_Tribbiani.jpg',
+          },
+          {
+            name: 'CSSScript',
+            phone: '8801343434343',
+            designation: 'CSSScript.Com',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/6/66/Matthew_Perry_as_Chandler_Bing.png',
+          },
+          {
+            name: 'Vue.js',
+            phone: '8801343434343',
+            active: false,
+          },
+        ],
+        headerMessage:
+          'Feel free to ask any questions in <strong>WhatsApp</strong>',
+        chatBoxMessage: 'Team replies in a minute',
+        color: '#25D366',
+      });
+    </script>
+  </body>
+</html>

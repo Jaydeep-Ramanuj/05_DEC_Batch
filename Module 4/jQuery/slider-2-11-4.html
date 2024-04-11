@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="plugins/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster/dist/jquery.flipster.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      img {
+        height: 300px;
+        width: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="coverflow">
+      <ul class="flip-items">
+        <li data-flip-title="Title 1">
+          <img
+            src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </li>
+        <li data-flip-title="Title 2">
+          <img
+            src="https://images.pexels.com/photos/7773732/pexels-photo-7773732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </li>
+        <li data-flip-title="Title 3">
+          <img
+            src="https://images.pexels.com/photos/6942375/pexels-photo-6942375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </li>
+        <li data-flip-title="Title 3">
+          <img
+            src="https://images.pexels.com/photos/7856692/pexels-photo-7856692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </li>
+        <li data-flip-title="Title 3">
+          <img
+            src="https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </li>
+      </ul>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="plugins/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster/dist/jquery.flipster.min.js"></script>
+    <script>
+      $(function () {
+        var coverflow = $('#coverflow').flipster({
+          start: 'center',
+          //   autoplay: true,
+          fadeIn: 400,
+          buttons: true,
+          loop: true,
+          style: 'coverflow',
+          //   style: 'carousel',
+          //   style: 'flat',
+          //   style: 'carousel',
+        });
+      });
+    </script>
+  </body>
+</html>
