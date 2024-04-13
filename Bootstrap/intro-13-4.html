@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="my-classes.css" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        margin: 50px auto;
+        /* color: red; */
+      }
+
+      .child {
+        width: 50px;
+        height: 50px;
+        background-color: yellowgreen;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="parent text-red d-flex justify-content-end align-items-end text-grey"
+    >
+      <div class="child d-flex justify-content-center align-items-center">
+        child1
+      </div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+    <div
+      class="parent text-red d-flex justify-content-end align-items-end text-black"
+    >
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+    <div
+      class="parent text-red d-flex justify-content-end align-items-end text-green"
+    >
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+  </body>
+</html>

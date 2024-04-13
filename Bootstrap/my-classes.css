@@ -1,0 +1,75 @@
+/* color */
+.text-red {
+  color: red;
+}
+.text-black {
+  color: black;
+}
+.text-green {
+  color: green;
+}
+.text-brown {
+  color: brown;
+}
+.text-pink {
+  color: pink;
+}
+.text-yellow {
+  color: yellow;
+}
+.text-grey {
+  color: grey;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* justify-content */
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* align-items */
+
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-stretch {
+  align-items: stretch;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+
+/* flex wrap */
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+.flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
